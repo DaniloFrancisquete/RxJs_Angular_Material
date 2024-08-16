@@ -16,6 +16,7 @@ import { SnackbarComponent } from './snackbar/snackbar.component';
 import { SnackbarMsnComponent } from './snackbar/snackbar-msn/snackbar-msn.component';
 import { DialogModalComponent } from './dialog/dialog-modal/dialog-modal.component';
 import { DialogComponent } from './dialog/dialog.component';
+import { DatatableComponent } from './datatable/datatable.component';
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import { DialogComponent } from './dialog/dialog.component';
     SnackbarComponent,
     SnackbarMsnComponent,
     DialogModalComponent,
-    DialogComponent
+    DialogComponent,
+    DatatableComponent
   ],
   imports: [
     BrowserModule,
