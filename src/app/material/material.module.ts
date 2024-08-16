@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 
 import { MAT_FORM_FIELD_DEFAULT_OPTIONS } from '@angular/material/form-field';
+import { MAT_SNACK_BAR_DEFAULT_OPTIONS, MatSnackBarModule } from '@angular/material/snack-bar';
 import { MAT_DATE_LOCALE } from '@angular/material/core';
 import{ MatSliderModule} from '@angular/material/slider'
 import {MatToolbarModule} from '@angular/material/toolbar';
@@ -14,7 +15,8 @@ import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import {MatTabsModule} from '@angular/material/tabs';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
-import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatDialogModule } from '@angular/material/dialog';
+
 
 @NgModule({
   exports: [
@@ -30,7 +32,8 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     MatTabsModule,
     MatDatepickerModule,
     MatNativeDateModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatDialogModule
   ],
   declarations: [],
   providers: [
@@ -40,6 +43,14 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     },
     {
       provide: MAT_DATE_LOCALE,useValue: 'pt-br'
+    },
+    {
+      provide: MAT_SNACK_BAR_DEFAULT_OPTIONS,
+      useValue: {
+        duration: 2500,
+        horizontalPosition: 'end',
+        verticalPosition:'top',
+      }
     }
   ]
 
